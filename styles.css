@@ -4775,18 +4775,22 @@ header .block-search {
 .node-evento.view-mode-full .group-header .label-inline, .node-evento.view-mode-full .group-header .label-above {
   font-weight: 700;
 }
+/*----------------------------------------------------------
+ Lineas donde inicia el cambio para los nuevos nodos de tipo evento con el formulario. Estas líneas adaptan el formulario y el contenido del nodo para adaptarse a los wireframes aprobados 
+----------------------------------------------------------
+*/
 /* line 2104, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-left-content {
+.node-evento.view-mode-full .group-right-content {
   font-size: 14px;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
 @media (min-width: 681px) {
   /* line 2104, ../sass/partials/_components.scss */
-  .node-evento.view-mode-full .group-left-content {
+  .node-evento.view-mode-full .group-right-content {
     width: 23.40426%;
-    float: left;
-    margin-right: -100%;
+    float: right; /*cambio*/
+    /* margin-right: -100%; */
     margin-left: 0%;
     clear: none;
     font-size: 12px;
@@ -4794,34 +4798,34 @@ header .block-search {
   }
 }
 /* line 2111, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-left-content .button {
+.node-evento.view-mode-full .group-right-content .button {
   margin-bottom: 15px;
 }
 /* line 2114, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-left-content .button, .node-evento.view-mode-full .group-left-content .field {
+.node-evento.view-mode-full .group-right-content .button, .node-evento.view-mode-full .group-right-content .field {
   clear: both;
 }
 /* line 2117, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-left-content .field {
+.node-evento.view-mode-full .group-right-content .field {
   margin-bottom: 5px;
 }
 /* line 2121, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-right-content {
+.node-evento.view-mode-full .group-left-content {
   font-size: 12px;
   font-size: 1.2rem;
 }
 @media (min-width: 681px) {
   /* line 2121, ../sass/partials/_components.scss */
-  .node-evento.view-mode-full .group-right-content {
+  .node-evento.view-mode-full .group-left-content {
     width: 74.46809%;
-    float: right;
+    float: left;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
 }
 /* line 2126, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-right-content h2 {
+.node-evento.view-mode-full .group-left-content h2 {
   display: none;
   font-size: 22px;
   font-size: 2.2rem;
@@ -4830,14 +4834,77 @@ header .block-search {
 }
 @media (min-width: 681px) {
   /* line 2126, ../sass/partials/_components.scss */
-  .node-evento.view-mode-full .group-right-content h2 {
+  .node-evento.view-mode-full .group-left-content h2 {
     display: block;
   }
+  .node-evento.view-mode-full .group-left-content .form-event-register{/* nuevo media query para formulario*/
+	float:left;
+	width:40% !important;
+	}
+	.node-evento.view-mode-full .group-left-content .group-contenido-evento{
+	float:left;
+	width:60% !important;
+	}
 }
 /* line 2135, ../sass/partials/_components.scss */
-.node-evento.view-mode-full .group-right-content h3 {
+.node-evento.view-mode-full .group-left-content h3 {
   margin-top: 0;
 }
+/* Clases nuevas para formulario */
+.node-evento.view-mode-full .group-left-content .form-event-register{
+	float:left;
+	width:100%;
+}
+.node-evento.view-mode-full .group-left-content .form-event-register .form-item{
+	display: inline-block;
+    margin: 0 5% 15px 0;
+    vertical-align: top;
+    width: 100%;
+}
+#webform-client-form-77364 #webform-component-phone1--phone-type, #webform-client-form-77379 #webform-component-phone1--phone-type{
+	width:30%;
+	float:left;
+	}
+#webform-client-form-77364 #webform-component-phone1--phone-code1, #webform-client-form-77379 #webform-component-phone1--phone-code1{
+	width:30%;
+	margin-top:24px;
+	float:left;
+	}
+#webform-client-form-77364 #webform-component-phone1--phone-number1-events, #webform-client-form-77379 #webform-component-phone1--phone-number1-events{
+	width:30%;
+	margin-top:24px;
+	float:left;
+	margin-left:0 !important;
+	margin-right: 0 !important;
+	}	
+#webform-client-form-77364 #edit-submit, #webform-client-form-77379 #edit-submit{
+	width:100%;
+	float:left !important;
+	}
+	
+@media (min-width: 0) and (max-width: 800px) {
+	#webform-client-form-77364 #webform-component-phone1--phone-type, #webform-client-form-77379 #webform-component-phone1--phone-type{
+	width:100% !important;
+	}
+#webform-client-form-77364 #webform-component-phone1--phone-code1, #webform-component-phone1--phone-number1-events, #webform-client-form-77379 #webform-component-phone1--phone-code1{
+	width:100% !important;
+	margin: 1em 0 !important;
+	}
+#webform-client-form-77364 #edit-submit, #webform-client-form-77379 #edit-submit{
+	width:100%;
+	float:left !important;
+	}
+}
+.node-evento.view-mode-full .group-left-content .group-contenido-evento{
+	float:left;
+	width:100%;
+	padding:0 15px;
+}
+/* FINAL
+----------------------------------------------------------
+ Lineas donde TERMINA el cambio para los nuevos nodos de tipo evento con el formulario. Estas líneas adaptan el formulario y el contenido del nodo para adaptarse a los wireframes aprobados 
+----------------------------------------------------------
+*/
 /* line 2139, ../sass/partials/_components.scss */
 .node-evento.view-mode-full .group-footer {
   margin-top: 20px;
